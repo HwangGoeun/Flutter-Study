@@ -64,9 +64,10 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            PIPView.of(context)?.presentBelow(const BackGroundScreen());
+            PIPView.of(context)?.presentBelow(
+                const BackGroundScreen()); // BackGroundScreen 위젯을 배경으로 띄우고 기존 앱은 PIP View로 보여주기
           },
-          tooltip: 'Increment',
+          tooltip: 'Increment', // 버튼을 길게 눌렀을 때 보여지는 안내창
           child: const Icon(Icons.add),
         ),
       ),
